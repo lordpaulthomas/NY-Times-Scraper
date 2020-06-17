@@ -1,1 +1,21 @@
-<h1>Hello World</h1>
+<header>
+  <h1 href="/">New <span class="york">york</span> Scraper</h1>
+  <nav>
+    <ul>
+      <li>
+        <a  href="/saved">Saved</a>
+      </li>
+      <li>
+        <a href="/scrape">Scrape</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+{{#each scraped_articles}}
+<div class="card">
+  <h1>{{title}}</h1>
+  <img src={{img}} />
+  <p>{{p}}</p>
+</div>
+{{/each}}
