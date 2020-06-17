@@ -43,8 +43,32 @@ header nav ul li  {
   display: inline-block;
   margin-left: 25px;
 }
-.card{
-  height: 2rem;
-  width: 4em;
-
+.card {
+  background: #fff;
+  border-radius: 2px;
+  height: 30em;
+  margin: 1rem;
+  position: relative;
+  width: 90%;
+  overflow: scroll;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
 }
+.card img{
+  position: relative;
+  display: flex;
+  flex: wrap;
+  justify-content: center; 
+  height: 15em;
+  width: 90%;
+
+  
+}
+.card .save{
+  display: flex;
+  justify-content: center;
+  color: red;
+  font-size: 2rem;
+}
+
+

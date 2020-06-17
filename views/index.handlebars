@@ -13,9 +13,23 @@
 </header>
 
 {{#each scraped_articles}}
-<div class="card">
-  <h1>{{title}}</h1>
-  <img src={{img}} />
-  <p>{{p}}</p>
+    <div class="card">
+      <div class="img-container">
+        <img alt="" src={{img}} />
+        <button class="save">Save</button>
+      </div>
+      <br/>
+      <div class="content">
+        <ul>
+          <li>
+           <strong>{{title}}</strong> 
+          </li>
+          <li>
+            {{p}}
+          </li>
+        </ul>
+      </div>
+
+    </div>
 </div>
 {{/each}}
