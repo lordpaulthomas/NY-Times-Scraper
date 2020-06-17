@@ -15,7 +15,8 @@ body {
 
 header {
   padding: 20px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
   background-color: #2a607c;
   color: #ffffff;
 }
@@ -24,8 +25,6 @@ header h1 {
   display: inline-block;
   font-size: 48px;
 }
-
-
 
 header nav {
   padding-top: 15px;
@@ -39,7 +38,7 @@ header nav ul {
   list-style-type: none;
 }
 
-header nav ul li  {
+header nav ul li {
   display: inline-block;
   margin-left: 25px;
 }
@@ -54,21 +53,22 @@ header nav ul li  {
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: left;
 }
-.card img{
+.card img {
   position: relative;
-  display: flex;
-  flex: wrap;
-  justify-content: center; 
   height: 15em;
-  width: 90%;
-
-  
+  width: 40em;
 }
-.card .save{
-  display: flex;
-  justify-content: center;
+.card .save {
+  position: relative;
+  width: 7em;
+  height: 4em;
   color: red;
-  font-size: 2rem;
+  font-size: 2em;
+  bottom: 3em;
+  left: 3em;
 }
 
+.img-container {
+  border: solid grey 2px;
 
+}
