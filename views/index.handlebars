@@ -1,9 +1,9 @@
 <header>
-  <h1 href="/" ><span class="york">New</span> York <span class="york">Times</span> Scraper</h1>
+  <h1 href="/"><span class="york">New</span> York <span class="york">Times</span> Scraper</h1>
   <nav>
     <ul>
       <li>
-        <a  href="/saved">Saved</a>
+        <a href="/saved">Saved</a>
       </li>
       <li>
         <a href="/scrape">Scrape</a>
@@ -13,23 +13,20 @@
 </header>
 
 {{#each scraped_articles}}
-    <div class="card">
-      <div class="img-container">
-        <img alt="" src={{img}} />
-        <button class="save">Save</button>
-      </div>
-      <br/>
-      <div class="content">
-        <ul>
-          <li>
-           <strong>{{title}}</strong> 
-          </li>
-          <li>
-            {{p}}
-          </li>
-        </ul>
-      </div>
-
-    </div>
+<div class="card">
+  <div class="img-container">
+    <img id="img" alt="" src={{img}} />
+    <button id="save" class="save">Save</button>
+  </div>
+  <div class="content">
+    <ul>
+      <li>
+        <h2 id="title">{{title}}</h2>
+      </li>
+      <li>
+        <p id="p">{{p}}</p>
+      </li>
+    </ul>
+  </div>
 </div>
 {{/each}}
