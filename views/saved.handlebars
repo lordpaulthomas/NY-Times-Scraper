@@ -1,14 +1,32 @@
 <header>
-  <h1>New <span class="york">york</span> Scraper</h1>
+  <h1 href="/"><span class="york">New</span> York <span class="york">Times</span> Scraper</h1>
   <nav>
     <ul>
       <li>
-        <a  href="/saved">Saved</a>
+        <a href="/saved">Saved</a>
       </li>
       <li>
-        <a  href="/scrape">Scrape</a>
+        <a href="/scrape">Scrape</a>
       </li>
     </ul>
   </nav>
 </header>
-<h1>Hi from saved</h1>
+
+{{#each saved_articles}}
+<div class="card"  id={{_id}}>
+  <div class="img-container">
+    <img id="img" alt="" src={{img}} />
+    <button class="delete">Delete</button>
+  </div>
+  <div class="content">
+    <ul>
+      <li>
+        <h2 id="title">{{title}}</h2>
+      </li>
+      <li>
+        <p id="p">{{p}}</p>
+      </li>
+    </ul>
+  </div>
+</div>
+{{/each}}

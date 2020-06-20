@@ -1,26 +1,21 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const db = require("./../models/")
+const db = require('./../models/');
 
 module.exports = {
   saveArticle: (req, res) => {
-    const savedArticle = {
-      "title": req.body.title,
-      'img': req.body.image,
-      "p": req.body.p
-    }
-    console.log(savedArticle);
-    db.Article
-      .create(savedArticle)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err))
+    db.Article.create(req.body)
+      .then((dbModel) => res.json(dbModel))
+      .catch((err) => res.status(422).json(err));
   },
   findAll: (req, res) => {
-    db.Article
-      .find()
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-    res.send('/saved')
+    db.Article.find()
+      .lean()
+      .then((dbModel) => {
+        res.render('saved', {saved_articles: dbModel});
+      })
+
+      .catch((err) => res.status(422).json(err));
   },
   scrape: (req, res) => {
     let results = [];
@@ -43,4 +38,12 @@ module.exports = {
         res.render('index', {scraped_articles: results});
       });
   },
+  delete: (req, res)=>{
+    console.log(req.params.id);
+    db.Article
+      .findById({_id: req.params.id })
+      .then(dbModel => dbModel.delete())
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err))
+  }
 };
