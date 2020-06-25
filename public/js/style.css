@@ -9,6 +9,7 @@
 
 body {
   background-color: #d9dcd6;
+  display: fixed;
 }
 
 /* HEADER */
@@ -38,9 +39,28 @@ header nav ul {
   list-style-type: none;
 }
 
-header nav ul li {
+header nav li {
   display: inline-block;
   margin-left: 25px;
+  color: #f3f3f3;
+}
+.links {
+  color: blue;
+}
+
+.links:visited {
+  color: blue;
+}
+
+.navWord {
+  color: #f3f3f3;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+.navWord:visited {
+  color: #f3f3f3;
+  text-decoration: none;
+  font-size: 1.5em;
 }
 .card {
   background: #fff;
@@ -48,7 +68,7 @@ header nav ul li {
   height: 30em;
   margin: 1rem;
   position: relative;
-  width: 90%;
+  width: 20em;
   overflow: scroll;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   text-align: left;
@@ -56,28 +76,44 @@ header nav ul li {
 .card img {
   position: relative;
   height: 15em;
-  width: 40em;
+  width: 20em;
 }
 .card .save {
-  position: relative;
-  width: 7em;
-  height: 4em;
+  width: 4em;
+  height: 2em;
   color: red;
-  font-size: 2em;
-  bottom: 3em;
-  left: 3em;
+  font-size: 1em;
+  margin-left: 1em;
 }
 .card .delete {
-  position: relative;
-  width: 7em;
-  height: 4em;
+  width: 4em;
+  height: 2em;
   color: red;
-  font-size: 2em;
-  bottom: 3em;
-  left: 3em;
+  font-size: 1em;
+  margin-left: 1em;
 }
 
 .img-container {
   border: solid grey 2px;
+}
+.content {
+  padding: 1em;
+  width: 20em;
+}
+h2,
+p {
+  padding: 0.2em;
+}
+h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1rem;
+}
 
+.articles {
+  display: inline-flex;
+}
+.message {
+  text-align: center;
+  padding-top: 2em;
+  font-size: 3em;
 }

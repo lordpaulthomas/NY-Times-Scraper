@@ -1,32 +1,31 @@
 <header>
   <h1 href="/"><span class="york">New</span> York <span class="york">Times</span> Scraper</h1>
   <nav>
-    <ul>
+    <ul >
       <li>
-        <a href="/saved">Saved</a>
+        <a class="navWord" href="/saved">Saved</a>
       </li>
       <li>
-        <a href="/scrape">Scrape</a>
+        <a class="navWord" href="/scrape">Scrape</a>
       </li>
     </ul>
   </nav>
 </header>
 
 {{#each scraped_articles}}
-<div class="card">
-  <div class="img-container">
+<div class='articles'>
+  <div class="card">
     <img id="img" alt="" src={{img}} />
-    <button id="save" class="save">Save</button>
-  </div>
-  <div class="content">
-    <ul>
-      <li>
+    <div class="content">
+      <a class="links" href='https://www.nytimes.com/{{a}}'>
         <h2 id="title">{{title}}</h2>
-      </li>
-      <li>
-        <p id="p">{{p}}</p>
-      </li>
-    </ul>
+      </a>
+      <h5 id="p">{{p}}</h5>
+      <p>
+        <small>By {{by}}</small></span>
+      </p>
+    </div>
+    <button class="save">Save</button>
   </div>
 </div>
 {{/each}}

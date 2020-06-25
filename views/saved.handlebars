@@ -3,30 +3,30 @@
   <nav>
     <ul>
       <li>
-        <a href="/saved">Saved</a>
+        <a class="navWord" href="/saved">Saved</a>
       </li>
       <li>
-        <a href="/scrape">Scrape</a>
+        <a class="navWord" href="/scrape">Scrape</a>
       </li>
     </ul>
   </nav>
 </header>
 
+<h1 class="message">{{saved_articles.message}}</h1>
+
 {{#each saved_articles}}
-<div class="card">
-  <div class="img-container">
+<div class='articles'>
+  <div class="card" id={{_id}}>
     <img id="img" alt="" src={{img}} />
-    <button id="delete" class="delete">Delete</button>
-  </div>
-  <div class="content">
-    <ul>
-      <li>
+    <div class="content">
+      <a class="links" href='{{a}}'>
         <h2 id="title">{{title}}</h2>
-      </li>
-      <li>
-        <p id="p">{{p}}</p>
-      </li>
-    </ul>
+      </a>
+      <h5 id="p" class="p">{{p}}</h5>
+      <p>
+        <small>{{by}}</small></p>
+    </div>
+      <button class="delete">Delete</button>
   </div>
 </div>
 {{/each}}
